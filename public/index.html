@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrokBot - Open Source AI Chat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">G</div>
+      <span class="brand-name">GrokBot</span>
+      <button class="collapse-btn" id="collapseBtn" title="Collapse">&#8249;</button>
+    </div>
+    <button class="new-chat" id="newChatBtn">+ New chat</button>
+    <div class="history-label">History</div>
+    <div class="history-list" id="historyList"></div>
+    <div class="sidebar-foot">
+      <div class="status" id="status"><span class="dot"></span> Checking...</div>
+      <div class="foot-note">Independent open-source project. Not affiliated with xAI.</div>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" title="Menu">&#9776;</button>
+      <div class="mode-tabs" id="modeTabs"></div>
+      <div class="topbar-right"><span class="model-tag" id="modelTag">deepseek-chat</span></div>
+    </header>
+    <div class="chat-area" id="chatArea">
+      <div class="welcome" id="welcome">
+        <div class="welcome-mark">G</div>
+        <h1>What do you want to talk about?</h1>
+        <p>Sharp, direct, a bit cheeky - but actually helpful.</p>
+        <div class="suggestions" id="suggestions">
+          <button class="sug" data-q="Explain black holes in plain language">Explain black holes</button>
+          <button class="sug" data-q="Write a short-video script about a historical figure">Write a video script</button>
+          <button class="sug" data-q="Search todays top tech news">Search tech news</button>
+          <button class="sug" data-q="In tweet style: is reading still worth it">Tweet about reading</button>
+        </div>
+      </div>
+      <div class="messages" id="messages"></div>
+    </div>
+    <div class="composer-wrap">
+      <div class="composer">
+        <textarea id="input" rows="1" placeholder="Ask anything... (Enter to send, Shift+Enter for newline)"></textarea>
+        <button class="send" id="sendBtn" title="Send">&#8593;</button>
+      </div>
+      <div class="composer-note">GrokBot can make mistakes. Verify important info.</div>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
